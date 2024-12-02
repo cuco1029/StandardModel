@@ -1,0 +1,86 @@
+\documentclass{article}
+\usepackage{listings}
+\usepackage{geometry}
+\geometry{a4paper, margin=1in}
+\title{StandardModel-Package: Estructura y Documentación}
+\begin{document}
+\maketitle
+\section{Estructura del Paquete}
+
+\begin{verbatim}
+StandardModel/
+├── StandardModel/
+│   ├── __init__.py
+│   ├── Graphic.py
+│       ├── __init__.py
+│       ├── Interfaz.py
+│       ├── BG.png
+│       ├── UNAM.png
+│       ├── Ciencias.png
+│   ├── Particles.py
+│       ├── __init__.py
+│       ├── Bosons.py
+│       ├── Leptons.py
+│       ├── Quearks.png
+│   ├── Systems.py
+│       ├── __init__.py
+│       ├── Operations.py
+│   ├── Vectors.py
+│       ├── __init__.py
+│       ├── four_vector.py
+│       ├── rotation.py
+│       ├── three_vector.png
+├── Demo.ipynb
+├── README.md
+├── setup.py
+├── LICENSE
+├── .gitignore
+└── requirements.txt
+\end{verbatim}
+
+\section{Descripción de Archivos}
+\begin{itemize}
+    \item \texttt{StandardModel/\_\_init\_\_.py}: Inicializa el paquete \texttt{StandardModel}.
+    \item \texttt{StandardModel/Graphic.py}: Contiene la primer interfaz gráfica de presentación del paquete. \texttt{StandardModel/Particles.py}: Comprende información elemental de las propieades de las partículas del modelo estándar. \texttt{StandardModel/Systems.py} y \texttt{StandardModel/Vectors.py}: Corresponde a funciones útiles en el contexto físico-matemático del modelo. 
+    \item \texttt{Demo.ipynb}: Directorio que contiene los archivos de prueba para cada módulo.
+    \item \texttt{README.md}:Notebook con pruebas de cada modulo.
+    \item \texttt{setup.py}: Script de configuración.
+    \item \texttt{LICENSE}: Documento de licencia del paquete.
+    \item \texttt{.gitignore}: Archivos y carpetas que Git debería ignorar.
+    \item \texttt{requirements.txt}: Lista de dependencias del paquete.
+\end{itemize}
+
+\section{Instalación y Ejecución}
+Para instalar este paquete de manera local es necesario acceder al directorio correspondiente al paquete:
+\begin{verbatim}
+cd /../../StandardModel
+\end{verbatim}
+y una vez ahí ejecutar el comando de instalación en modo editable 
+\begin{verbatim}
+pip install -e .
+\end{verbatim}
+Para hacer uso de él importa los módulos o propiedades que desees \\
+
+Ej.
+\begin{verbatim}
+from StandardModel.Particles.Quarks import *
+
+Particula1 = quark_up
+Particula1.description()
+\end{verbatim}
+
+\section{Uso del Paquete por un Usuario Externo}
+Un usuario puede instalar el paquete ejecutando:
+
+\begin{verbatim}
+pip install git+https://github.com/usuario/StandardModel.git
+\end{verbatim}
+
+Luego puede usarlo como:
+
+\begin{verbatim}
+from First-Package import module1
+module1.example_function()
+\end{verbatim}
+
+\end{document}
