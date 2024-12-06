@@ -31,13 +31,6 @@ Este paquete se puede instalar utilizando `pip`. Si deseas instalar el paquete d
 
 Esto instalará el paquete de manera que cualquier cambio que realices en el código se refleje inmediatamente sin necesidad de reinstalar el paquete.
 
-## Uso
+## Documentacion
 
-### Crear un vector 3D
-
-```python
-from paquete import ThreeVector
-
-# Crear un vector 3D
-v = ThreeVector(1, 2, 3)
-print(v)  # Output: ThreeVector(x=1, y=2, z=3)
+Vease: https://cuco1029.gitbook.io/cuco1029
